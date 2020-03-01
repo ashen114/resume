@@ -1,9 +1,10 @@
 @import "../node_modules/compass-mixins/lib/compass/reset";
 @import "../node_modules/compass-mixins/lib/compass/css3";
 
-$color-gray: #d1d1d1;
-$color-green: #00b38a;
-$font-family: 'Helvetica Neue', Helvetica, Arial, "Microsoft YaHei", sans-serif;
+$main-color: #409eff;
+$color-gray: #dcdfe6;
+$main-bgColor: #f2f6fc;
+$font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", sans-serif;
 
 * {
   @include box-sizing(border-box);
@@ -17,7 +18,7 @@ body {
   font-family: $font-family;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
-  background-color: #eee;
+  background-color: $main-bgColor;
   overflow: auto;
   padding-top: 5px;
   @media screen and (max-width: 1024px) {
@@ -27,8 +28,8 @@ body {
 
 a {
   text-decoration: none;
-  color: $color-green;
-  @include transition(all .2s ease-in-out);
+  color: $main-color;
+  @include transition(all 0.2s ease-in-out);
 }
 
 .last-modified {
@@ -82,7 +83,7 @@ a {
   width: 100%;
   padding: 30px 50px;
   color: #fff;
-  background-color: $color-green;
+  background-color: $main-color;
   overflow: hidden;
   @media screen and (max-width: 720px) {
     padding: 25px 30px;
@@ -93,7 +94,7 @@ a {
   }
   .title {
     width: 100%;
-    border-bottom: 2px solid darken($color-green, 2%);
+    border-bottom: 2px solid darken($main-color, 2%);
     font-size: 52px;
     font-weight: 300;
     overflow: hidden;
@@ -113,7 +114,8 @@ a {
   .name {
     float: left;
     h1 {
-      font-family: "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", $font-family;
+      font-family: "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3",
+        $font-family;
       font-weight: 500;
       letter-spacing: 5px;
       @media screen and (max-width: 720px) {
@@ -145,7 +147,7 @@ a {
       display: inline-block;
       font-size: 24px;
       @media screen and (max-width: 720px) {
-        border-top: 1px solid darken($color-green, 2%);
+        border-top: 1px solid darken($main-color, 2%);
         margin: 5px auto 0;
         padding: 10px;
       }
@@ -175,7 +177,8 @@ a {
           @media print {
             color: #000;
           }
-          font-family: "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", $font-family;
+          font-family: "Lucida Grande", "Hiragino Sans GB",
+            "Hiragino Sans GB W3", $font-family;
           font-size: 14px;
           line-height: 22px;
           &:hover {
@@ -344,16 +347,16 @@ a {
 .btn {
   display: inline-block;
   padding: 0 5px;
-  border: 1px solid $color-green;
+  border: 1px solid $main-color;
   border-radius: 3px;
-  color: $color-green;
+  color: $main-color;
   font-family: Menlo, $font-family;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
   &:hover {
     color: #fff;
-    background-color: $color-green;
+    background-color: $main-color;
   }
 }
 
@@ -372,4 +375,10 @@ a {
   @media print {
     display: none;
   }
+}
+
+// custom Style
+
+.second-li {
+  margin-left: 2em;
 }
