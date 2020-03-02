@@ -106,8 +106,7 @@ module.exports = {
         "--headless",
         "--disable-gpu",
         `--print-to-pdf=${path.resolve(outputPath, "resume.pdf")}`,
-        // "https://ashen114.github.io" // 这里注意改成你的在线简历的网站
-        "./" // 这里注意改成你的在线简历的网站
+        "https://ashen114.github.io/resume/index.html" // 这里注意改成你的在线简历的网站
       ]);
 
       // 重新发布到 ghpages

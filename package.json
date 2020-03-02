@@ -1,8 +1,8 @@
 {
   "scripts": {
     "dev": "webpack-dev-server --open --hot",
-    "puba": "webpack --config webpack-dist.config.js",
-    "pub": "NODE_ENV=production webpack --config webpack-dist.config.js && rm -rf .public"
+    "build": "webpack --config webpack-dist.config.js",
+    "linux-build": "NODE_ENV=production webpack --config webpack-dist.config.js && rm -rf .public"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
