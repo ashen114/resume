@@ -5,6 +5,32 @@
 - 可在线浏览
 - 自动生成 PDF，全自动化流程
 
+## Todo-List
+
+- [x] 加入英文版
+- [x] 允许打包两个版本
+    ```js
+    // 修改webpack-dist.config.js，参考链接：https://www.cnblogs.com/amiezhang/p/9723565.html
+        new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      filename: "index.html",
+      inject: "head",
+      inlineSource: ".(js|css)"
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/en.html",
+      filename: "en.html",
+      inject: "head",
+      inlineSource: ".(js|css)"
+    }),
+    new ExtractTextPlugin({
+      filename: "[name]_[contenthash:8].css",
+      allChunks: true
+    }),
+    new HtmlWebpackInlineSourcePlugin() 
+    ```
+- [ ] 修复生成两个版本的pdf  
+
 ## 使用
 
 1. fork 本项目后再 clone 到本地修改
