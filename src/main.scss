@@ -287,8 +287,8 @@ a {
     min-height: 30px;
     .item-time {
       display: inline-block;
-      float: left;
-      width: 25%;
+      // float: left;
+      // width: 25%;
       @media screen and (max-width: 720px) {
         width: 100%;
         margin-bottom: 5px;
@@ -308,6 +308,10 @@ a {
   }
   .item-des {
     margin-bottom: 16px;
+    line-height: 24px;
+
+    border-left: 1px solid $color-gray;
+    padding-left: 1rem;
   }
   .section-content {
     text-align: justify;
@@ -337,9 +341,27 @@ a {
       background-color: #f6f6f6;
     }
   }
-  .practice {
+  #practice,
+  #school,
+  #awards {
     .item-time {
-      width: 100%;
+      float: right;
+      // width: 100%;
+    }
+  }
+
+  #skill {
+    .item-time {
+      font-weight: bold;
+    }
+  }
+
+  #school {
+    ul {
+      // list-style: decimal;
+    }
+    li {
+      // list-style: none;
     }
   }
 }
@@ -385,4 +407,25 @@ a {
 
 .en .section-title {
   width: 50%;
+}
+
+.content-title {
+  margin: 1em 0;
+  font-weight: bolder;
+}
+
+.fw-bloder {
+  font-weight: bolder;
+}
+
+.fw-blod {
+  font-weight: bold;
+}
+
+/* practice-content */
+
+.practice-content {
+  .item-head {
+    margin: 0.25rem 0;
+  }
 }

@@ -1,7 +1,8 @@
 const path = require("path");
-const { WebPlugin } = require("web-webpack-plugin");
+// const { WebPlugin } = require("web-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackInlineSourcePlugin = require("html-webpack-inline-source-plugin");
 module.exports = {
   output: {
     publicPath: "",
@@ -42,14 +43,31 @@ module.exports = {
     main: "./src/main.js"
   },
   plugins: [
-    new WebPlugin({
+    // new WebPlugin({
+    //   template: "./src/index.html",
+    //   filename: "index.html"
+    // }),
+    // new ExtractTextPlugin({
+    //   filename: "[name].css",
+    //   allChunks: true
+    // })
+    new HtmlWebpackPlugin({
       template: "./src/index.html",
-      filename: "index.html"
+      filename: "index.html",
+      inject: "head",
+      inlineSource: ".(js|css)"
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/en.html",
+      filename: "en.html",
+      inject: "head",
+      inlineSource: ".(js|css)"
     }),
     new ExtractTextPlugin({
-      filename: "[name].css",
+      filename: "[name]_[contenthash:8].css",
       allChunks: true
-    })
+    }),
+    new HtmlWebpackInlineSourcePlugin()
   ],
   devtool: "source-map"
 };
