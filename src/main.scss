@@ -305,6 +305,10 @@ a {
   }
   .item-bd {
     margin-bottom: 5px;
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: #f1f5f8;
+    }
   }
   .item-des {
     margin-bottom: 16px;
@@ -430,6 +434,6 @@ a {
   }
 }
 
-.development{
+.development {
   color: #bbb;
 }
