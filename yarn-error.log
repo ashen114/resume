@@ -1,0 +1,51 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  D:\sortware\VWmare\bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Ashen\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Git\cmd;D:\sortware\Process Lasso\;C:\Users\Ashen\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\Ashen\AppData\Local\Programs\Python\Python38\;C:\Users\Ashen\AppData\Local\Microsoft\WindowsApps;C:\Users\Ashen\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Ashen\AppData\Roaming\nvm;C:\Program Files\nodejs;D:\sortware\Bandizip\
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.13.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: connect ETIMEDOUT 104.16.27.35:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1145:16)
+
+npm manifest: 
+  {
+    "scripts": {
+      "dev": "webpack-dev-server --open --hot",
+      "build": "webpack --config webpack-dist.config.js",
+      "linux-build": "NODE_ENV=production webpack --config webpack-dist.config.js && rm -rf .public"
+    },
+    "devDependencies": {
+      "autoprefixer": "^7.1.2",
+      "chrome-finder": "^1.0.1",
+      "compass-mixins": "^0.12.10",
+      "css-loader": "^0.28.5",
+      "end-webpack-plugin": "^1.0.0",
+      "extract-text-webpack-plugin": "^3.0.0",
+      "gh-pages": "^1.0.0",
+      "html-webpack-inline-source-plugin": "^0.0.10",
+      "html-webpack-plugin": "^3.2.0",
+      "node-sass": "^4.5.3",
+      "postcss-loader": "^2.0.6",
+      "sass-loader": "^6.0.5",
+      "style-loader": "^0.18.0",
+      "web-webpack-plugin": "^1.9.3",
+      "webpack": "^3.5.5",
+      "webpack-dev-server": "^2.7.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
