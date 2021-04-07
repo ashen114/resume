@@ -121,13 +121,14 @@
                     <br />
                     <span class="fw-blod">项目简介：</span>即速应用管理后台的移动端，目前已经兼容微信小程序，企业微信及安卓APP等平台。
                     <br />
-                    <span class="fw-blod">相关技术：</span>uni-app、Less、jweixin、cloudbase
+                    <span class="fw-blod">相关技术：</span>uni-app、Vuex、Less、jweixin、cloudbase
                     <br />
                     <ul class="section-content">
                       <li>根据原型图及UI，开发功能模块</li>
-                      <li>遵循分包原则拆分组件，公共组件components的编写和维护</li>
-                      <li>封装优化基本请求、七牛云、企业微信API、腾讯云开发等模块</li>
-                      <li>兼容多平台，包括微信小程序，企业微信H5（侧边栏），安卓APP等</li>
+                      <li>遵循分包原则按业务拆分组件，公共组件components及公用样式的编写和维护</li>
+                      <li>统一处理请求；二次封装uni-api，以兼容多平台，包括微信小程序，企业微信H5（侧边栏），安卓APP等</li>
+                      <li>使用 WebSocket 监听消息通知</li>
+                      <li>封装七牛云、腾讯云开发等模块，实现文件上传下载，封装企业微信API实现静默登陆及侧边栏功能</li>
                     </ul>
                   </div>
                 </div>
@@ -185,9 +186,16 @@
                   <div class="item-des">
                     <span class="fw-blod">主要职责：</span>负责微信小程序相关的组件包的更新迭代
                     <br />
-                    <span class="fw-blod">项目简介：</span>即速应用的微信，抖音，QQ及百度小程序的组件包
+                    <span class="fw-blod">项目简介：</span>小程序组件包，配合编辑器的模块配置进行组合打包以生成对应平台的小程序
                     <br />
                     <span class="fw-blod">前端技术栈：</span>微信小程序技术栈
+                    <br />
+                    <ul class="section-content">
+                      <li>根据原型图及UI，开发功能模块</li>
+                      <li>按业务进行分包拆分，将通用组件使用template进行模块封装</li>
+                      <li>使用单例模式封装canvas进行海报绘制</li>
+                      <li></li>
+                    </ul>
                   </div>
                 </div>
               </div>
